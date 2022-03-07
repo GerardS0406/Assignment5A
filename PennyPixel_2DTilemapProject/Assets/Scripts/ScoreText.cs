@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+* Gerard Lamoureux
+* 5A
+* Handles Score Text
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

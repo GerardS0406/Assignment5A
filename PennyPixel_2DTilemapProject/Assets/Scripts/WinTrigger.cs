@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+* Gerard Lamoureux
+* 5A
+* Handles Win Trigger
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +20,7 @@ public class WinTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            GameObject.FindGameObjectWithTag("GameOverText").GetComponent<WinManager>().gameOver = true;
+            GameObject.Find("/Canvas/GameOverText").GetComponent<WinManager>().gameOver = true;
         }
     }
 }

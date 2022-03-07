@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+* Gerard Lamoureux
+* 5A
+* Handles Game Over Text
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,10 +12,11 @@ using UnityEngine.UI;
 public class WinManager : MonoBehaviour
 {
     public bool gameOver = false;
-    public Text textbox;
+    private Text textbox;
     // Start is called before the first frame update
     void Start()
     {
+        textbox = gameObject.GetComponent<Text>();
         gameObject.SetActive(false);
     }
 

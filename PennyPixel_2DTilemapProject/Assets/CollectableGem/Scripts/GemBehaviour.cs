@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+* Gerard Lamoureux
+* Assignment 5A
+* When Gem is Picked Up, Increase Score
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
