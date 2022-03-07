@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+* Gerard Lamoureux
+* 5A
+* Handles when player goes too low so game ends.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
