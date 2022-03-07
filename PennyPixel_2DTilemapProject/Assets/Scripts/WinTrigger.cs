@@ -10,6 +10,7 @@ using UnityEngine;
 
 public class WinTrigger : MonoBehaviour
 {
+    public GameObject text;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,9 @@ public class WinTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            GameObject.Find("/Canvas/GameOverText").GetComponent<WinManager>().gameOver = true;
+            text.GetComponent<WinManager>().win = true;
+            text.GetComponent<WinManager>().gameOver = true;
+            Debug.Log("Hello");
         }
     }
 }
