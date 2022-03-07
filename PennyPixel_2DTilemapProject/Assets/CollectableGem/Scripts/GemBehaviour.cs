@@ -30,6 +30,7 @@ public class GemBehaviour : MonoBehaviour
 		gemVisuals.SetActive (false);
 		collectedParticleSystem.SetActive (true);
 		Invoke ("DeactivateGemGameObject", durationOfCollectedParticleSystem);
+		GameObject.FindGameObjectWithTag("ScoreText").GetComponent<ScoreText>().score++;
 
 	}
 
