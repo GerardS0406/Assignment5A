@@ -1,32 +1,29 @@
 /*
 * Gerard Lamoureux
 * 5B
-* Handles Collectable Papers to Win Game
+* Handles Win Trigger
 */
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class CollectableCoin : MonoBehaviour
+public class TriggerWinTrigger : MonoBehaviour
 {
     private ScoreManager sm;
+    private Text gameOverText;
     // Start is called before the first frame update
     void Start()
     {
         sm = GameObject.Find("/Canvas/ScoreText").GetComponent<ScoreManager>();
+        gameOverText = GameObject.Find("/Canvas/WinText").GetComponent<Text>();
+        gameOverText.text = "";
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        gameObject.transform.Rotate(0,1,0);
-    }
-
     void OnTriggerEnter(Collider theCollider)
     {
-        if (theCollider.CompareTag ("Player")) {
-            sm.score++;
+        if (theCollider.CompareTag ("Player") && sm.score >= 6) {
+            gameOverText.text = "Game Over! You Win!";
             Destroy(gameObject);
         }
     }

@@ -1,3 +1,9 @@
+/*
+* Gerard Lamoureux
+* 5B
+* Handles First Person Movement
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,3 +1,9 @@
+/*
+* Gerard Lamoureux
+* 5B
+* Handles Targets with Health (unused in project)
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

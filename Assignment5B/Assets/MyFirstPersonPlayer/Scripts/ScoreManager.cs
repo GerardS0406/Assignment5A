@@ -1,3 +1,9 @@
+/*
+* Gerard Lamoureux
+* 5B
+* Handles Score and Score UI
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,21 +13,17 @@ public class ScoreManager : MonoBehaviour
 {
     public int score = 0;
     private Text textbox;
-    private Text gameOverText;
     // Start is called before the first frame update
     void Start()
     {
         textbox = gameObject.GetComponent<Text>();
-        gameOverText = GameObject.Find("/Canvas/WinText").GetComponent<Text>();
-        gameOverText.text = "";
     }
 
     // Update is called once per frame
     void Update()
     {
         textbox.text = "Pages: " + score;
-        if(score >= 6)
-            gameOverText.text = "Game Over! You Win!";
-
+        if(score >= 6 && GameObject.Find("/WorldCanvas/DoorText") != null)
+            Destroy(GameObject.Find("/WorldCanvas/DoorText"));
     }
 }
